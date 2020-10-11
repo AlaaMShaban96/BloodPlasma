@@ -10,7 +10,6 @@
                     <h1> We promise to bring
                         the best <span>solution</span> for
                         your business. </h1>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus turpis nisl. </p>
                     <a href="#contact">Contact Us <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
                 <div class="col-md-6">
                     <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
