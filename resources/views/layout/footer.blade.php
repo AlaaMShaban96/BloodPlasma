@@ -5,9 +5,9 @@
                 <form action="{{url('/send')}}" method="post">
                     @csrf
                     <h4> Contact Us </h4>
-                    <input  type="text" name="name" class="form-control" placeholder="Full Name">
-                    <input type="email" name="email"  class="form-control" placeholder="Email Address">
-                    <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                    <input  type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    <input type="email" name="email"  class="form-control" placeholder="Email Address" required>
+                    <textarea class="form-control" name="message" placeholder="Message" required></textarea>
                     <input type="submit" class="submit-button" value="Send">
                 </form>
             </div>
