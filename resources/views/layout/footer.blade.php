@@ -25,14 +25,10 @@
                         </ul>
                         <h4 class="mt-5">Fllow Us</h4>
                         <ul class="nav follow-us-nav">
-                            <li class="nav-item"><a class="nav-link pl-0" href="#"><i class="fa fa-facebook"
-                                                                                      aria-hidden="true"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"
-                                                                                 aria-hidden="true"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-google"
-                                                                                 aria-hidden="true"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"
-                                                                                 aria-hidden="true"></i></a></li>
+                            <li class="nav-item"><a class="nav-link pl-0" href="https://www.facebook.com/NanoTechgroup"><i class="fa fa-facebook"  aria-hidden="true"></i></a></li>
+                            {{-- <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/NanoTechgroup"><i class="fa fa-twitter"  aria-hidden="true"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/NanoTechgroup"><i class="fa fa-google"  aria-hidden="true"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/NanoTechgroup"><i class="fa fa-linkedin"  aria-hidden="true"></i></a></li> --}}
                         </ul>
                     </div>
                     <div class="col-6">
@@ -48,7 +44,7 @@
                         </ul>
                     </div>
                     <div class="col-12">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>                    </div>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </div>
                 </div>
             </div>
         </div>
