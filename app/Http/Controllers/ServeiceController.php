@@ -87,6 +87,6 @@ class ServeiceController extends Controller
     {
         // dd($request->all());
         Mail::to('info@nano-tech.ly')->send(new ContactUs($request));
-        return 'done';
+        return redirect('/');
     }
 }
