@@ -1,3 +1,7 @@
+@php
+  App::setLocale(	Session::get('applocale'));
+//   $x=Session::get('applocale');
+@endphp
 @extends('layout.master')
 
 @section('content')
@@ -7,10 +11,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1> We promise to bring
-                        the best <span>solution</span> for
-                        your business. </h1>
-                    <a href="#contact">Contact Us <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                    {{-- {{__('index.our_partners')}} --}}
+                    <h1> {{__('index/index.start')}}</h1>
+                    <a href="#contact">{{__('index/index.Contact_Us')}} <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
                 <div class="col-md-6">
                     <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
                 </div>
@@ -49,14 +52,10 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <h2>How Nano ? </h2>
-                    <p> 
-                        Nano is an emerging team specialized in providing our technical and marketing services. The Nano family includes a team of creative and young professionals in different disciplines.    
-                    </p>
+                    <h2>{{__('index/index.how_nano')}} </h2>
+                    <p> {{__('index/index.how_nano_part_1')}} </p>
                     <p>
-                        <small>
-                            We believe that technology has the power to build the future, and we aspire to help organizations and individuals and support them for digital transformation through technical solutions.
-                        </small>
+                        <small>{{__('index/index.how_nano_part_2')}} </small>
                     </p>
                     {{-- <a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a> --}}
                 </div>
@@ -67,11 +66,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <h2> Explore The Services<br/>
-                        We Offer For You </h2>
-                    <p> 
-                        We offer a range of services that ensure the success and prosperity of your business    
-                    </p>
+                    <h2> {{__('index/index.explore')}}</h2>
+                    <p> {{__('index/index.explore_details')}} </p>
                     {{-- <a href="#">All Services <i class="fa fa-angle-right" aria-hidden="true"></i></a> --}}
                 </div>
                 <div class="col-lg-8">
@@ -205,96 +201,178 @@
             </div>
         </div>
     </div> --}}
-    {{-- <div class="container-fluid gtco-testimonials">
+    <div class="container-fluid gtco-testimonials">
         <div class="container">
-            <h2>What our customers say about us.</h2>
+            <h2>{{__('index/index.our_team')}}</h2>
             <div class="owl-carousel owl-carousel1 owl-theme">
                 <div>
-                    <div class="card text-center"><img class="card-img-top" src="images/customer1.jpg" alt="">
+                    <div class="card text-center"><img class="card-img-top" src="images/team/alaa.jpg" alt="">
                         <div class="card-body">
-                            <h5>Lisa Gally <br/>
-                                <span> Project Manager </span></h5>
-                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                                impedit quo minus id quod maxime placeat ” </p>
+                            <h5>Alaa Mohammed<br/>
+                                <span> Back End developer </span></h5>
+                            <p class="card-text">
+                                <a href="https://web.facebook.com/weldtribole/">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="48" height="48"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="card text-center"><img class="card-img-top" src="images/customer2.jpg" alt="">
+                    <div class="card text-center"><img class="card-img-top" src="images/team/maliek.jpg" alt="">
                         <div class="card-body">
-                            <h5>Missy Limana<br/>
-                                <span> Project Manager </span></h5>
-                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                                impedit quo minus id quod maxime placeat ” </p>
+                            <h5>Malek Awedan<br/>
+                                <span> Front End developer </span></h5>
+                                <p class="card-text">
+                                    <a href="https://web.facebook.com/malek.aweden1/"  >
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                </a>
+                                </p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
+                    <div class="card text-center"><img class="card-img-top" src="images/team/walied.jpg" alt="">
                         <div class="card-body">
-                            <h5>Aana Brown<br/>
-                                <span> Project Manager </span></h5>
-                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                                impedit quo minus id quod maxime placeat ” </p>
+                            <h5>Walid Fahig<br/>
+                                <span> Back End developer </span></h5>
+                            <p class="card-text">
+                                <a href="https://web.facebook.com/WalidFahig/">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="48" height="48"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
+                    <div class="card text-center"><img class="card-img-top" src="images/team/mohammed_alyacoubi.jpg" alt="">
                         <div class="card-body">
-                            <h5>Aana Brown<br/>
-                                <span> Project Manager </span></h5>
-                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                                impedit quo minus id quod maxime placeat ” </p>
+                            <h5>Mohammed Alyacoubi<br/>
+                                <span> Mobile developer </span></h5>
+                            <p class="card-text">
+                                <a href="https://web.facebook.com/profile.php?id=100006942280938">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="48" height="48"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                </a>
+                            </p> 
+              
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div class="card text-center"><img class="card-img-top" src="images/team/Mohammad_Abourgibah.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Mohammad Abourgibah<br/>
+                                <span> Social Media </span></h5>
+                                <p class="card-text">
+
+                                    <a href="https://web.facebook.com/mohammed98ab/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                    </a>
+  
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card text-center"><img class="card-img-top" src="images/team/algatas.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Mohammed Alghattas<br/>
+                                <span> IT Support</span></h5>
+                                
+                                <p class="card-text">
+
+                                <a href="https://web.facebook.com/medoo.aght/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                                </a>
+
+                                </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card text-center"><img class="card-img-top" src="images/team/Bashir_Abumhara.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Bashir Abumhara<br/>
+                                <span> Designer</span></h5>
+                                <p class="card-text">
+                                    <a href="https://web.facebook.com/bashir.mhara/">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><defs><linearGradient x1="35.80825" y1="35.80825" x2="145.53708" y2="145.53708" gradientUnits="userSpaceOnUse" id="color-1_uLWV5A9vXIPu_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667z" fill="url(#color-1_uLWV5A9vXIPu_gr1)"></path><path d="M95.70008,104.99525h18.54733l2.91325,-18.84117h-21.46058v-10.2985c0,-7.826 2.5585,-14.76692 9.87925,-14.76692h11.76408v-16.44033c-2.06758,-0.2795 -6.43925,-0.88867 -14.69883,-0.88867c-17.25017,0 -27.36233,9.10883 -27.36233,29.8635v12.5345h-17.73392v18.84117h17.73033v51.78633c3.51167,0.52317 7.06992,0.8815 10.72133,0.8815c3.30025,0 6.52167,-0.301 9.70008,-0.731z" fill="#ffffff"></path></g></g></svg>
+                               </a>
+                             </p>
+                                
+                        </div>
+                    </div>
+                </div>
+             
             </div>
         </div>
-    </div> --}}
+    </div>
     <div class="container-fluid gtco-features-list">
         <div class="container">
             <div class="row">
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/quality-results.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Quality Results</h5>
-                        We provide the best service with high accuracy in the shortest possible time
+                        <h5 class="mb-0">{{__('index/index.quality_results')}}</h5>
+                        {{__('index/index.quality_results_details')}}
                     </div>
                 </div>
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/analytics.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Analytics</h5>
-                        We analyze systems and projects to obtain results that satisfy the customer
+                        <h5 class="mb-0">{{__('index/index.analytics')}}</h5>
+                        {{__('index/index.analytics_details')}}
                     </div>
                 </div>
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/affordable-pricing.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Affordable Pricing</h5>
-                        Our services are available to institutions and individuals at excellent rates
+                        <h5 class="mb-0">{{__('index/index.affordable_pricing')}}</h5>
+                        {{__('index/index.affordable_pricing_details')}}
                     </div>
                 </div>
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/easy-to-use.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Easy To Use</h5>
-                        We design user-friendly interfaces to provide the best user experience for the customer
+                        <h5 class="mb-0"> {{__('index/index.easy_to_use')}}</h5>
+                        {{__('index/index.easy_to_use_details')}}
                     </div>
                 </div>
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/free-support.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Free Support</h5>
-                        We provide maintenance services throughout the week
+                        <h5 class="mb-0">{{__('index/index.free_support')}}</h5>
+                        {{__('index/index.free_support_details')}}
                     </div>
                 </div>
                 <div class="media col-md-6 col-lg-4">
                     <div class="oval mr-4"><img class="align-self-start" src="images/effectively-increase.png" alt=""></div>
                     <div class="media-body">
-                        <h5 class="mb-0">Effectively Increase</h5>
-                        We strive as much as possible to make our customers happy with the progress of their commercial and service activities
+                        <h5 class="mb-0">{{__('index/index.effectively_increase')}}</h5>
+                        {{__('index/index.effectively_increase_details')}}
                     </div>
                 </div>
             </div>

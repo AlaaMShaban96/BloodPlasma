@@ -1,0 +1,37 @@
+<?php
+return[
+    'start'=>'We promise to bring the best solution for your business. ',
+    'how_nano'=>'How Nano ? ',
+    'how_nano_part_1'=>'Nano is an emerging team specialized in providing our technical and marketing services. The Nano family includes a team of creative and young professionals in different disciplines. ',
+    'how_nano_part_2'=>'We believe that technology has the power to build the future, and we aspire to help organizations and individuals and support them for digital transformation through technical solutions. ',
+    'explore'=>'Explore The Services   We Offer For You ',
+    'explore_details'=>'We offer a range of services that ensure the success and prosperity of your business ',
+    'quality_results'=>'Quality Results',
+    'quality_results_details'=>'We provide the best service with high accuracy in the shortest possible time ',
+    'analytics'=>'Analytics',
+    'analytics_details'=>'We analyze systems and projects to obtain results that satisfy the customer ',
+    'affordable_pricing'=>'Affordable Pricing',
+    'affordable_pricing_details'=>'Our services are available to institutions and individuals at excellent rates ',
+    'easy_to_use'=>'Easy To Use',
+    'easy_to_use_details'=>'We design user-friendly interfaces to provide the best user experience for the customer ',
+    'free_support'=>'Free Support',
+    'free_support_details'=>'We provide maintenance services throughout the week ',
+    'effectively_increase'=>'Effectively Increase',
+    'effectively_increase_details'=>'We strive as much as possible to make our customers happy with the progress of their commercial and service activities ',
+    'Contact_Us'=>'Contact Us',
+    'full_name'=>'Full Name',
+    'email'=>'Email Address',
+    'message'=>'Message',
+    'fllow_us'=>'Fllow Us',
+    'services'=>'Services',
+    'links'=>'Links',
+    'arabic'=>'Arabic',
+    'english'=>'English',
+    'our_team'=>'Our Team',
+    'phone'=>'Phone',
+    'loction'=>'Loction',
+    'tripoli'=>'Tripoli',
+
+
+
+];

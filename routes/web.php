@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('index');
 });
 Route::post('/send', 'ServeiceController@send');
+Route::get('/lang/{lang}', 'ServeiceController@translater');

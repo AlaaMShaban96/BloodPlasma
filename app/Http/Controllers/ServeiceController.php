@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class ServeiceController extends Controller
 {
@@ -89,4 +90,10 @@ class ServeiceController extends Controller
         Mail::to('info@nano-tech.ly')->send(new ContactUs($request));
         return redirect('/');
     }
+    public function translater($lang)
+    {
+         Session::put('applocale', $lang);
+     
+          return redirect()->back();
+    } 
 }

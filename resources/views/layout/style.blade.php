@@ -5,3 +5,11 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- custom CSS -->
 <link rel="stylesheet" href="css/style.css">
+{{-- @if (Session::get('applocale')=="ar") --}}
+<link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+  <style>
+      html{
+          font-family: 'Tajawal'
+      }
+  </style>
+{{-- @endif --}}

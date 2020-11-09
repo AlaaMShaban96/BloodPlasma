@@ -4,11 +4,9 @@
                 class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span></button>
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto" style="background-color:#fff6;">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                {{-- <li class="nav-item"><a class="nav-link" href="#news">News</a></li> --}}
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url('/lang/ar')}}">{{__('index/index.arabic')}}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/lang/en')}}">{{__('index/index.english')}}</a></li>
+
             </ul>
            
         </div>

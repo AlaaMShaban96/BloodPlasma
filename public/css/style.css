@@ -47,7 +47,8 @@ p {
 body {
   overflow: hidden;
   overflow-y: auto;
-  font-family: "OpenSans-Regular";
+  /* font-family: "OpenSans-Regular"; */
+  font-family: "Tajawal";
 }
 
 @media (min-width: 1200px) {
@@ -255,7 +256,7 @@ body {
 }
 @media (max-width: 1199px) {
   .gtco-banner-area h1 {
-    margin-top: 30px;
+    margin-top: 30px;Tajawal
   }
 }
 .gtco-banner-area p {
@@ -324,9 +325,9 @@ body {
   display: inline-block;
 }
 
-.gtco-features {
+/* .gtco-features {
   margin-top: 100px;
-}
+} */
 .gtco-features svg {
   position: absolute;
   margin-left: -100px;
